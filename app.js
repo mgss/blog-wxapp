@@ -1,6 +1,10 @@
 App({
   globalData:{
-    greeting: 'hello~'
+    greeting: [
+      'Hello~',
+      'Hola~',
+      '您好~'
+    ]
   },
   onLaunch(options){
     console.log('APP - onLaunch', options);

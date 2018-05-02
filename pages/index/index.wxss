@@ -2,3 +2,6 @@
   font-size: 32px;
   font-family: serif;
 }
+.image image {
+  width: 100%;
+}
