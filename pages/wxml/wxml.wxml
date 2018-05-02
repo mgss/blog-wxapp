@@ -1,14 +1,7 @@
+<import src="../templates/header.wxml" />
+
 <view class="container vertical centered">
-  <view wx:if="{{ header.show }}">
-    <text class="{{ header.class }}">
-       {{ header.content }}
-    </text>
-  </view>
-  <view wx:else>
-    <text class="{{ header.class }}">
-       {{ 'Null' }}
-    </text>
-  </view>
+  <template is="header" data="{{...header}}" />
   <view wx:for="{{fruits}}" wx:for-index="No" wx:for-item="fruit">
     <text>{{No+1}} : {{fruit}}</text>
   </view>

@@ -1,0 +1,12 @@
+<template name="header">
+  <view wx:if="{{ show }}">
+    <text class="{{ class }}">
+      {{ content }}
+    </text>
+  </view>
+  <view wx:else>
+    <text class="{{ class }}">
+      {{ 'Null' }}
+    </text>
+  </view>
+</template>
