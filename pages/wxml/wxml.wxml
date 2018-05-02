@@ -1,0 +1,18 @@
+<view class="container vertical centered">
+  <view wx:if="{{ header.show }}">
+    <text class="{{ header.class }}">
+       {{ header.content }}
+    </text>
+  </view>
+  <view wx:else>
+    <text class="{{ header.class }}">
+       {{ 'Null' }}
+    </text>
+  </view>
+  <view wx:for="{{fruits}}" wx:for-index="No" wx:for-item="fruit">
+    <text>{{No+1}} : {{fruit}}</text>
+  </view>
+</view>
+<view class="image">
+  <image src="/assets/images/landscape.png"></image>
+</view>
