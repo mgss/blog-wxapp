@@ -2,7 +2,7 @@
 
 <view class="container vertical centered">
   <template is="header" data="{{...header}}" />
-  <view wx:for="{{fruits}}" wx:for-index="No" wx:for-item="fruit">
+  <view wx:for="{{fruits}}" wx:for-index="No" wx:for-item="fruit" wx:key="{{No}}">
     <text>{{No+1}} : {{fruit}}</text>
   </view>
 </view>
