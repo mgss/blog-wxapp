@@ -1,0 +1,28 @@
+.slides {
+
+  }
+  .slides image, .slides video{
+    height: 38.2vh;
+  }
+  .slides .content {
+    padding-top: 10%;
+  }
+  .slides .content.centered {
+    text-align: center;
+  }
+  .slides .sub-header {
+    font-size: 32rpx;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    color: rgba(0,0,0,.85);
+  }
+  .slides .header {
+    font-size: 72rpx;
+    font-weight: bold;
+    margin: 0 12% 8px;
+  }
+  .slides .description {
+    padding: 0 12%;
+    margin-bottom: 32px;
+  }

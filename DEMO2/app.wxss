@@ -1,0 +1,11 @@
+@import 'styles/reset.wxss';  /* 重置 */
+@import 'styles/slides.wxss'; /* 轮播 */
+@import 'styles/button.wxss'; /* 按钮 */
+@import 'styles/card.wxss';   /* 卡片 */
+
+page {
+  background: #f8f8f8;
+}
+.section {
+  height: 100vh;
+}

@@ -1,0 +1,39 @@
+<!-- 轮播图 -->
+<swiper class="section slides" indicator-dots="{{ true }}">
+  <block wx:for="{{ slides }}" wx:key="id">
+    <swiper-item >
+      <image src="{{ item.image }}"></image>
+      <view class="content centered">
+        <view class="sub-header">{{item.sub_header}}</view>
+        <view class="header">{{item.header}}</view>
+        <view class="description">{{item.description}}</view>
+        <view class="action">
+          <button bind class="button">预约试驾</button>
+          <button bind class="button primary">了解更多</button>
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 汽车卡片 -->
+<view class="cards">
+  <view class="card"
+    hover-class="hover"
+    wx:for="{{ entities }}"
+    wx:key="id">
+    <image src="{{ item.image }}"></image>
+    <view class="content">
+      <view class="header">
+        {{ item.header }}
+        <view class="sub-header">
+          {{ item.sub_header }}
+        </view>
+      </view>
+      <view class="description">{{ item.description }}</view>
+      <view class="meta"> {{ item.meta.price }} </view>
+    </view>
+  </view>
+</view>
+
+
