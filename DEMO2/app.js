@@ -1,6 +1,5 @@
 App({
   globalDate:{
-    slides:[1,2,3] 
   },
   onLaunch(){
     wx.request({

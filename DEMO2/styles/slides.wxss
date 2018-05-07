@@ -7,6 +7,13 @@
   .slides image, .slides video{
     height: 38.2vh;
   }
+  .slides.small .header {
+    font-size: 56rpx;
+    margin-bottom: 48rpx;
+  }
+  .slides.small .sub-header {
+    font-size: 24rpx;
+  }
   .slides .content {
     padding-top: 10%;
   }

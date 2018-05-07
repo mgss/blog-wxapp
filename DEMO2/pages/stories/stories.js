@@ -1,66 +1,34 @@
-// pages/stories/stories.js
+const app = getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    entities: null,
+    currentVid: null,
+    currentVideo: null,
   },
+  player (event) {
+    // 如果当前播放视频不为空，则让它停止播放
+    if (this.data.currentVid !== null) {
+      this.data.currentVideo.pause()
+    }
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+    // 获取当前点击id的视频对象，并让其开始播放
+    const currentVideo = wx.createVideoContext(`${ event.target.dataset.vid }`)
+    currentVideo.play()
+
+    // 将当前视频和视频ID保存为全局状态
+    this.setData({
+      currentVideo,
+      currentVid: event.target.dataset.vid
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  // readMore(event) {
+  //   wx.navigateTo({
+  //     url: `/pages/vehicles/show?id=${event.target.dataset.id}`,
+  //   })
+  // },
+  onLoad() {
+    this.setData({
+      entities: app.globalDate.stories,
+    })
   }
 })

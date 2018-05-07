@@ -46,11 +46,11 @@
         <view class="description">{{item.description}}</view>
       </view>
       <image 
-      bindtap="preview"
-      data-slides="exterior_design"
-      data-index="{{ index }}"
-      src="{{ item.image }}" 
-      mode="aspectFill" />
+        bindtap="preview"
+        data-slides="exterior_design"
+        data-index="{{ index }}"
+        src="{{ item.image }}" 
+        mode="aspectFill" />
     </swiper-item>
   </block>
 </swiper>
@@ -65,11 +65,11 @@
         <view class="description">{{item.description}}</view>
       </view>
       <image 
-      bindtap="preview"
-      data-slides="interior_design" 
-      data-index="{{ index }}"
-      src="{{ item.image }}" 
-      mode="aspectFill" />
+        bindtap="preview"
+        data-slides="interior_design" 
+        data-index="{{ index }}"
+        src="{{ item.image }}" 
+        mode="aspectFill" />
     </swiper-item>
   </block>
 </swiper>
