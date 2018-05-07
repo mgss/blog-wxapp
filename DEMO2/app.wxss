@@ -2,6 +2,10 @@
 @import 'styles/slides.wxss'; /* 轮播 */
 @import 'styles/button.wxss'; /* 按钮 */
 @import 'styles/card.wxss';   /* 卡片 */
+@import 'styles/cover.wxss';  /* 图片详情 */
+@import 'styles/spec.wxss';   /* 规格 */
+@import 'styles/action.wxss'; /* 动作 */
+@import 'styles/story.wxss';  /* 故事轮播 */
 
 page {
   background: #f8f8f8;

@@ -1,5 +1,8 @@
 .slides {
-
+  
+  }
+  .slides.white {
+    background-color: #fff;
   }
   .slides image, .slides video{
     height: 38.2vh;
