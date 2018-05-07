@@ -1,9 +1,11 @@
+import testDrive from '../../models/test-drive'
 const app = getApp()
 
 Page({
   data:{
     entity: null
   },
+  testDrive,
   preview (event) {
     const slidesName = event.target.dataset.slides
     const index = event.target.dataset.index
@@ -22,8 +24,8 @@ Page({
       current: images[index]
     })
   },
-  onLoad () {
-    const id = 3
+  onLoad (options) {
+    const id = options.id
     // 根据ID得到数据
     const entity = app.globalDate.vehicles.filter((item)=>{
       return item.id == id

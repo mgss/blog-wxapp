@@ -1,4 +1,6 @@
+<!-- 首屏 -->
 <view class="section">
+  <!-- 图片 -->
   <view class="cover">
     <image src="{{ entity.image }}" mode="aspectFill" />
     <view class="content">
@@ -11,6 +13,7 @@
       <view class="meta">{{ entity.meta.price }}</view>
     </view>
   </view>
+  <!-- 规格 -->
   <view class="spec">
     <view class="item">
       <view class="header">二氧化碳排放</view>
@@ -29,9 +32,11 @@
   </view>
   <view class="action">
     <view class="description"> {{ entity.description }}</view>
-    <button class="button primary">预约试驾</button>
+    <button class="button primary" bindtap="testDrive">预约试驾</button>
   </view>
 </view>
+
+<!-- 外观轮播 -->
 <swiper class="section story white" indicator-dots="{{ true }}">
   <block wx:for="{{ entity.meta.exterior_design }}" wx:key="id">
     <swiper-item>
@@ -49,6 +54,8 @@
     </swiper-item>
   </block>
 </swiper>
+
+<!-- 内饰轮播 -->
 <swiper class="section story" indicator-dots="{{ true }}">
   <block wx:for="{{ entity.meta.interior_design }}" wx:key="id">
     <swiper-item>
